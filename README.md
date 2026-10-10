@@ -50,31 +50,52 @@ flowchart TD
     Q -->|Invalid| O
 ```
 
- **Run Locally**
+ ## Run Locally
 
-**cmd**
+### 1. Clone the Repository
 
+```bash
 git clone https://github.com/JafsinJaleel/marketing-copilot.git
-
 cd marketing-copilot
+```
 
+### 2. Create and Activate Virtual Environment
+
+```cmd
 python -m venv venv
-
 venv\Scripts\activate
+```
 
+### 3. Install Dependencies
+
+```cmd
 pip install -r requirements.txt
+```
 
+### 4. Start Qwen3 with Ollama
+
+Make sure Ollama is installed and running.
+
+```cmd
 ollama pull qwen3:4b
+```
 
+### 5. Start the FastAPI Server
+
+```cmd
 uvicorn app.api.main:app --reload
+```
 
+The API will be available at:
 
-API: `http://127.0.0.1:8000`
+`http://127.0.0.1:8000`
 
-Swagger: `http://127.0.0.1:8000/docs`
+Interactive API documentation:
 
-**Testing**
-**cmd**
+`http://127.0.0.1:8000/docs`
 
+### 6. Run Tests
+
+```cmd
 pytest -q
-
+```
