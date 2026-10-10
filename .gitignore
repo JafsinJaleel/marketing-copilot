@@ -1,0 +1,10 @@
+venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+vector_store/
+app/agents/agentic_campaign_backup.py
+app/agents/agentic_campaign_before_segment.py
+app/mcp/client_backup.py
+data/customers.db
