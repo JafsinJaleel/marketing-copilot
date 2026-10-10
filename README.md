@@ -21,25 +21,33 @@ Python · LangGraph · Qwen3 · Ollama · RAG · MCP · FastAPI · SQLite · Sen
 
  Architecture
 
-text
-User
- ↓
-FastAPI
- ↓
-LangGraph Agent
- ↓
-Tool Selection
- ↓
-MCP
- ↓
-Product / Customer / Marketing Tools
- ↓
-RAG + SQLite
- ↓
-Qwen3
- ↓
-Validated Campaign
+```mermaid
+flowchart TD
+    A[User Request] --> B[FastAPI]
+    B --> C[LangGraph Agent]
+    C --> D[Intent Classification]
+    D --> E[Tool Selection]
+    E --> F[MCP Client]
+    F --> G[MCP Server]
 
+    G --> H[Product Tool]
+    G --> I[Customer Tool]
+    G --> J[Marketing Tool]
+
+    H --> K[RAG - Product Knowledge]
+    I --> L[SQLite - Customer Data]
+    J --> M[RAG - Marketing Guidelines]
+
+    K --> N[Retrieved Context]
+    L --> N
+    M --> N
+
+    N --> O[Qwen3 - Ollama]
+    O --> P[Campaign Generation]
+    P --> Q[Campaign Validator]
+
+    Q -->|Valid| R[Final Marketing Campaign]
+    Q -->|Invalid| O
 
  Run Locally
 
