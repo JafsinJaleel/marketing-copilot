@@ -53,13 +53,17 @@ flowchart TD
  **Run Locally**
 
 **cmd**
+
 git clone https://github.com/JafsinJaleel/marketing-copilot.git
+
 cd marketing-copilot
 
 python -m venv venv
+
 venv\Scripts\activate
 
 pip install -r requirements.txt
+
 ollama pull qwen3:4b
 
 uvicorn app.api.main:app --reload
