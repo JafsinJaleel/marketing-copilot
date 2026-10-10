@@ -1,10 +1,10 @@
- AI Marketing Copilot
+**AI Marketing Copilot**
 
 An Agentic AI marketing assistant built with Python, LangGraph, RAG, MCP, FastAPI, and Qwen3/Ollama.
 
 It analyzes marketing requests, selects relevant tools, retrieves product and customer context, generates campaigns, and validates the output.
 
- Features
+ **Features**
 
 - Agentic AI workflow with LangGraph
 - Local Qwen3 LLM using Ollama
@@ -15,11 +15,11 @@ It analyzes marketing requests, selects relevant tools, retrieves product and cu
 - REST API using FastAPI
 - Automated testing with Pytest
 
- Tech Stack
+ **Tech Stack**
 
 Python · LangGraph · Qwen3 · Ollama · RAG · MCP · FastAPI · SQLite · Sentence Transformers · Pytest · Git
 
- Architecture
+ **Architecture**
 
 ```mermaid
 flowchart TD
@@ -50,9 +50,9 @@ flowchart TD
     Q -->|Invalid| O
 ```
 
- Run Locally
+ **Run Locally**
 
-cmd
+**cmd**
 git clone https://github.com/JafsinJaleel/marketing-copilot.git
 cd marketing-copilot
 
@@ -69,8 +69,7 @@ API: `http://127.0.0.1:8000`
 
 Swagger: `http://127.0.0.1:8000/docs`
 
-Testing
-
-cmd
+**Testing**
+**cmd**
 pytest -q
 
